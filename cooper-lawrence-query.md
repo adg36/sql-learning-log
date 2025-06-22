@@ -17,15 +17,11 @@ HAVING COUNT(title) > 1;
 ```
 This worked and passed the check. My reasoning was:
 
-I needed only movie titles.
-
-I knew each actor is linked to a movie through the stars table.
-
-So I joined movies with stars, and then stars with people.
-
-I filtered for rows where either of the two actors was present.
-
-I grouped by title and kept only those titles that had more than one match — meaning both actors were associated with that movie.
+1. I needed only movie titles.
+2. I knew each actor is linked to a movie through the stars table.
+3. So I joined movies with stars, and then stars with people.
+4. I filtered for rows where either of the two actors was present.
+5. I grouped by title and kept only those titles that had more than one match — meaning both actors were associated with that movie.
 
 ## CS50’s Suggested Approach
 Afterwards, I looked at the walkthrough, which suggests a more step-by-step algorithmic method:
