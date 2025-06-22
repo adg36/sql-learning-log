@@ -1,14 +1,12 @@
 # 🎬 CS50 SQL Practice – IMDB Query: Cooper & Lawrence
 
 ## Problem
-From the CS50 Problem Set 7, the task was to write a SQL query to list the titles of all movies in which both Bradley Cooper and Jennifer Lawrence starred, using an IMDb-like database.
+From the CS50 Problem Set 7, the task was to write a SQL query to list the titles of all movies in which both Bradley Cooper and Jennifer Lawrence starred.
 
 ## My Approach
 Without looking at any hints or walkthroughs, I wrote the following query:
 
-```sql
-Copiar
-Editar
+```
 SELECT title
 FROM movies
 JOIN stars ON stars.movie_id = movies.id
@@ -43,11 +41,9 @@ This approach is more modular, possibly more readable and extensible, and closer
 ## Reflection
 I’m glad I solved this independently and got a correct result, but it also made me reflect on algorithmic thinking vs set-based reasoning in SQL:
 
-My version is more compact but relies on understanding how GROUP BY and HAVING interact with filtered joins.
-
 The suggested approach emphasizes clarity and traceability — breaking the problem into smaller queries that could be debugged or tested separately.
 
-I think both are valid. In fact, my approach works because the schema doesn’t contain duplicate actor-movie pairs (or if it does, it's not enough to break the logic). But in a more complex or messy real-world dataset, the step-by-step method might be more robust.
+Although I think both are valid, I acknowledge that, in a more complex or messy real-world dataset, the step-by-step method might be more robust.
 
 ## What I Learned
 Writing SQL is often like solving a puzzle — and there are multiple correct paths.
